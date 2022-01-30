@@ -135,7 +135,7 @@
 #	
 #	potential = {
 #		exists = space_owner
-#		space_owner = { is_same_value = from }
+#		is_owned_by = from
 #		from = { has_ascension_perk = ap_transcendence }
 #		OR = {
 #			is_wet = yes
@@ -190,7 +190,7 @@
 #	
 #	potential = {
 #		exists = space_owner
-#		space_owner = { is_same_value = from }
+#		is_owned_by = from
 #		from = { has_ascension_perk = ap_transcendence }
 #		is_planet_class = pc_shrouded
 #		NOT = { has_planet_flag = pd_shroud_transformation }
@@ -354,14 +354,11 @@ decision_shroud_planet_patron = {
 			is_planet_class = pc_shroudmilarc
 			is_planet_class = pc_shroudcorpoarc
 		}
-		NOT = { 
-			OR = {
+		NOR = {
 				has_modifier = pdwhispers 
 				has_modifier = pdcomposer 
 				has_modifier = pdeater 
-				has_modifier = pddesire 
-			}
-		}
+				has_modifier = pddesire }
 		OWNER = {
 			NOT = {
 				AND = {

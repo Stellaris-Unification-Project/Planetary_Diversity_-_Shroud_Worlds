@@ -248,14 +248,12 @@ d_pdshroudarctemple = {
 			owner = {
 				is_regular_empire = yes
 			}
-			NOT = {
-				OR = {
+			NOR = {
 					has_modifier = pdcomposer
 					has_modifier = pdwhispers
 					has_modifier = pdeater
 					has_modifier = pddesire
-				}
-			}
+}
 		}
 		modifier = {
 			job_priest_add = 5
